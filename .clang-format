@@ -1,6 +1,4 @@
-Language: JavaScript
+Language: Cpp
 BasedOnStyle:  WebKit
 BreakBeforeBraces: Attach
 NamespaceIndentation: None
-IndentWidth: 2
-TabWidth: 2
