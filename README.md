@@ -1,0 +1,2 @@
+# RGBEncoder
+Multifunctional interactive control
