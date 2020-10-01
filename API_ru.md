@@ -20,11 +20,15 @@
 
 - `wire`: выбираемый интерейс i2c. При вызове без параметра - аппаратный интерфейс `Wire`.
 
-### `void changeAddress(uint8_t newAddress)`
+### `void changeAddr(uint8_t newAddress)`
 
-Изменяет адрес устройства на шине i2c и рестартует устройство с новым адресом.
+Изменяет адрес устройства на шине i2c на указанный но не сохраняет его в EEPROM.
 
 - `newAddress`: новое значение адреса.
+
+### `void saveAddr(void)`
+
+Сохраняет текущий адрес устройства в EEPROM.
 
 ### `void setValue(int32_t value)`
 
