@@ -49,7 +49,7 @@
 
 - `step`: шаг изменения значения энкодера. 
 
-### `void setMode(EncoderMode mode)`
+### `void setMode(enum EncoderMode mode)`
 
 Задает режим работы энкодера - с упором в границы диапазона или циклический.
 
