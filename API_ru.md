@@ -75,10 +75,10 @@
 
 Возвращает текущее значение энкодера
 
-### `void onButton(void (*)(bool state) buttonHandler)`
+### `void onButton(void (*buttonHandler)(bool state))`
 
 Регистрирует функцию - обработчик событий от кнопки
 
-### `void onEncoder(void (*)(int32_t value) encoderHandler)`
+### `void onEncoder(void (*encoderHandler)(int32_t value))`
 
 Регистрирует функцию-обработчик событий от энкодера.
