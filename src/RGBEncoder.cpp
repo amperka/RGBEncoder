@@ -12,7 +12,7 @@
 
 void buttonDumb(bool state) { (void)state; }
 void encoderDumb(int32_t value) { (void)value; }
-void stepsDumb() {}
+void stepsDumb() { }
 
 RGBEncoder::RGBEncoder(uint8_t i2cAddress) {
     _i2cAddress = i2cAddress;
@@ -97,10 +97,12 @@ void RGBEncoder::update() {
     // encoder part
     int8_t difference = readEncoderDiff(0);
     if (difference != 0) {
-        if(difference > 0) { // right
-            for(int i = 0; i < difference; i++) _stepRightHandler();
+        if (difference > 0) { // right
+            for (int i = 0; i < difference; i++)
+                _stepRightHandler();
         } else { // left
-            for(int i = 0; i < -difference; i++) _stepLeftHandler();
+            for (int i = 0; i < -difference; i++)
+                _stepLeftHandler();
         }
 
         _encoderCurrentValue += difference * _encoderStep;
@@ -124,9 +126,9 @@ void RGBEncoder::update() {
 }
 
 void RGBEncoder::setColor(uint8_t r, uint8_t g, uint8_t b) {
-    GpioExpander::analogWrite(_redLedPin, r);
-    GpioExpander::analogWrite(_greenLedPin, g);
-    GpioExpander::analogWrite(_blueLedPin, b);
+    GpioExpander::analogWrite(_redLedPin, 255 - r);
+    GpioExpander::analogWrite(_greenLedPin, 255 - g);
+    GpioExpander::analogWrite(_blueLedPin, 255 - b);
 }
 
 bool RGBEncoder::isButtonPressed() const { return _buttonState; }
