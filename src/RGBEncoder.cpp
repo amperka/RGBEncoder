@@ -94,12 +94,12 @@ void RGBEncoder::update() {
     // encoder part
     int8_t difference = readEncoderDiff(0);
     if (difference != 0) {
-        if (difference > 0) { // right
+        if (difference > 0) { // left
             for (int i = 0; i < difference; i++)
-                _stepRightHandler();
-        } else { // left
-            for (int i = 0; i < -difference; i++)
                 _stepLeftHandler();
+        } else { // right
+            for (int i = 0; i < -difference; i++)
+                _stepRightHandler();
         }
 
         _encoderCurrentValue += difference * _encoderStep;
