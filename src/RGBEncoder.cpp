@@ -22,7 +22,7 @@ RGBEncoder::RGBEncoder(uint8_t i2cAddress) {
     _encoderUpperBound = 255;
     _encoderCurrentValue = 0;
     _encoderStep = 1;
-    _encoderMode = RGBENC_WRAP;
+    _encoderMode = RGBENC_CLAMP;
     _buttonHandler = buttonDumb;
     _encoderHandler = encoderDumb;
     _stepLeftHandler = stepsDumb;
@@ -57,8 +57,11 @@ void RGBEncoder::begin(TwoWire* wire) {
     }
 }
 
-void RGBEncoder::changeAddress(uint8_t newAddress) {
+void RGBEncoder::changeAddr(uint8_t newAddress) {
     GpioExpander::changeAddr(newAddress);
+}
+
+void RGBEncoder::saveAddr() {
     GpioExpander::saveAddr();
 }
 
