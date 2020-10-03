@@ -46,7 +46,6 @@ public:
     void onEncoder(void (*encoderHandler)(int32_t value));
     void onStepLeft(void (*handler)());
     void onStepRight(void (*handler)());
-    
 
 private:
     static constexpr uint8_t _redLedPin = 2;
@@ -55,10 +54,10 @@ private:
     static constexpr uint8_t _encoderAPin = 7;
     static constexpr uint8_t _encoderBPin = 8;
     static constexpr uint8_t _buttonPin = 3;
+    static constexpr uint16_t _debounceTime = 20; // ms
 
     uint8_t _i2cAddress;
     bool _buttonState;
-    int8_t _buttonPreState;
     int32_t _encoderLowerBound;
     int32_t _encoderUpperBound;
     int32_t _encoderCurrentValue;

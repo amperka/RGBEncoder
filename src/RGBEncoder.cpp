@@ -17,7 +17,6 @@ void stepsDumb() { }
 RGBEncoder::RGBEncoder(uint8_t i2cAddress) {
     _i2cAddress = i2cAddress;
     _buttonState = false;
-    _buttonPreState = 0;
     _encoderLowerBound = 0;
     _encoderUpperBound = 255;
     _encoderCurrentValue = 0;
@@ -48,13 +47,10 @@ void RGBEncoder::begin(TwoWire* wire) {
 
     GpioExpander::pinMode(_buttonPin, INPUT);
     int16_t state = GpioExpander::digitalRead(_buttonPin);
-    if (state == 0) {
+    if (state == 0)
         _buttonState = false;
-        _buttonPreState = 0;
-    } else {
+    else
         _buttonState = true;
-        _buttonPreState = 7;
-    }
 }
 
 void RGBEncoder::changeAddr(uint8_t newAddress) {
@@ -79,17 +75,18 @@ void RGBEncoder::setMode(enum EncoderMode mode) { _encoderMode = mode; }
 void RGBEncoder::update() {
     // button part
     int16_t state = GpioExpander::digitalRead(_buttonPin);
-    if (state == 0) {
-        if (_buttonPreState > 0)
-            _buttonPreState--;
-        if (_buttonPreState == 0) {
+    if (state == 0 && _buttonState == true) {
+        delay(_debounceTime);
+        state = GpioExpander::digitalRead(_buttonPin);
+        if (state == 0) {
             _buttonState = false;
             _buttonHandler(false);
         }
-    } else {
-        if (_buttonPreState < 7)
-            _buttonPreState++;
-        if (_buttonPreState == 7) {
+    }
+    if (state != 0 && _buttonState == false) {
+        delay(_debounceTime);
+        state = GpioExpander::digitalRead(_buttonPin);
+        if (state != 0) {
             _buttonState = true;
             _buttonHandler(true);
         }
