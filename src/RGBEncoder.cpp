@@ -97,7 +97,7 @@ void RGBEncoder::update() {
         if (difference > 0) { // left
             for (int i = 0; i < difference; i++)
                 _stepLeftHandler();
-        } else { // right
+        } else if (difference < 0) { // right
             for (int i = 0; i < -difference; i++)
                 _stepRightHandler();
         }
