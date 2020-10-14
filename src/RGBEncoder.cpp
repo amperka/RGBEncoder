@@ -78,7 +78,7 @@ void RGBEncoder::update() {
     if (state == LOW && _buttonState) {
         delay(_debounceTime);
         state = GpioExpander::digitalRead(_buttonPin);
-        if (state == 0) {
+        if (state == LOW) {
             _buttonState = false;
             _buttonHandler(false);
         }
