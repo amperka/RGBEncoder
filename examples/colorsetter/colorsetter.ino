@@ -61,7 +61,7 @@ void encoderHandler(int32_t value) {
 }
 
 void setup() {
-    knob.begin(); // initialisation
+    knob.begin(); // initialization
     // register handlers for button and encoder
     knob.onButton(buttonHandler);
     knob.onEncoder(encoderHandler);
