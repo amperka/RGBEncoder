@@ -11,7 +11,7 @@
 // Create object of RGBEncoder
 RGBEncoder knob;
 
-// mode is state mashine state.
+// mode is the state of a finite-state machine.
 // By switching these states, we select the color component that we want to adjust.
 #define CHANGE_RED 0
 #define CHANGE_GREEN 1
