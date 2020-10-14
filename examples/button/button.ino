@@ -19,7 +19,7 @@ void buttonHandler(bool state) {
 }
 
 void setup() {
-    knob.begin(); // initialisation
+    knob.begin(); // initialization
     knob.onButton(buttonHandler); // connect button handler
     knob.setColor(0, 0, 0); // switch-off light
 }
