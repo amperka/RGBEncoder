@@ -75,18 +75,18 @@ void RGBEncoder::setMode(enum EncoderMode mode) { _encoderMode = mode; }
 void RGBEncoder::update() {
     // button part
     int16_t state = GpioExpander::digitalRead(_buttonPin);
-    if (state == 0 && _buttonState == true) {
+    if (state == LOW && _buttonState) {
         delay(_debounceTime);
         state = GpioExpander::digitalRead(_buttonPin);
-        if (state == 0) {
+        if (state == LOW) {
             _buttonState = false;
             _buttonHandler(false);
         }
     }
-    if (state != 0 && _buttonState == false) {
+    if (state == HIGH && !_buttonState) {
         delay(_debounceTime);
         state = GpioExpander::digitalRead(_buttonPin);
-        if (state != 0) {
+        if (state == HIGH) {
             _buttonState = true;
             _buttonHandler(true);
         }
