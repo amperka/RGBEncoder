@@ -79,12 +79,12 @@ Registers a function - an event handler from a button.
 
 ### `void onEncoder(void (*encoderHandler)(int32_t value))`
 
-Registers an encoder value change handler function that returns a new value.
+Registers an encoder event handler function. The handler function is called when changes are received and receives the current encoder value.
 
-### `void (*_stepLeftHandler)()`
+### `void onStepLeft (void (* stepLeftHandler) ())`
 
-Registers a handler function to be called at each left encoder step.
+Registers a function that is an encoder event handler. Called for each left rotation step.
 
-### `void (*_stepRightHandler)()`
+### `void onStepRight (void (* stepRightHandler) ())`
 
-Registers a handler function to be called at each right encoder step.
+Registers a function that is an encoder event handler. Called for each step when rotated to the right.
