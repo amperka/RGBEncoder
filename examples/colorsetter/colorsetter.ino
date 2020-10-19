@@ -19,7 +19,7 @@ RGBEncoder knob;
 byte mode = CHANGE_RED;
 
 // Current color components values
-byte r = 0, g = 0, b = 0;
+byte red = 0, green = 0, blue = 0;
 
 // Handler of button
 void buttonHandler(bool state) {
@@ -27,18 +27,18 @@ void buttonHandler(bool state) {
         switch (mode) {
         case CHANGE_RED:
             mode = CHANGE_GREEN; // select next state
-            b = knob.getEncoderValue(); // save previous color component value
-            knob.setValue(r); // load new color component value
+            blue = knob.getEncoderValue(); // save previous color component value
+            knob.setValue(red); // load new color component value
             break;
         case CHANGE_GREEN:
             mode = CHANGE_BLUE;
-            r = knob.getEncoderValue();
-            knob.setValue(g);
+            red = knob.getEncoderValue();
+            knob.setValue(green);
             break;
         case CHANGE_BLUE:
             mode = CHANGE_RED;
-            g = knob.getEncoderValue();
-            knob.setValue(b);
+            green = knob.getEncoderValue();
+            knob.setValue(blue);
             break;
         }
     }
@@ -48,16 +48,16 @@ void buttonHandler(bool state) {
 void encoderHandler(int32_t value) {
     switch (mode) {
     case CHANGE_RED:
-        r = value; // load new value to color component
+        red = value; // load new value to color component
         break;
     case CHANGE_GREEN:
-        g = value;
+        green = value;
         break;
     case CHANGE_BLUE:
-        b = value;
+        blue = value;
         break;
     }
-    knob.setColor(r, g, b); // show new color
+    knob.setColor(red, green, blue); // show new color
 }
 
 void setup() {

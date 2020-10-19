@@ -122,10 +122,10 @@ void RGBEncoder::update() {
     }
 }
 
-void RGBEncoder::setColor(uint8_t r, uint8_t g, uint8_t b) {
-    GpioExpander::analogWrite(_redLedPin, 255 - r);
-    GpioExpander::analogWrite(_greenLedPin, 255 - g);
-    GpioExpander::analogWrite(_blueLedPin, 255 - b);
+void RGBEncoder::setColor(uint8_t red, uint8_t green, uint8_t blue) {
+    GpioExpander::analogWrite(_redLedPin, 255 - red);  // Led brightness is inverted
+    GpioExpander::analogWrite(_greenLedPin, 255 - green);
+    GpioExpander::analogWrite(_blueLedPin, 255 - blue);
 }
 
 bool RGBEncoder::isButtonPressed() const { return _buttonState; }
