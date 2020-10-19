@@ -10,9 +10,9 @@
 
 #include "RGBEncoder.h"
 
-void buttonDumb(bool state) { (void)state; }
-void encoderDumb(int32_t value) { (void)value; }
-void stepsDumb() { }
+static void buttonDumb(bool state) { (void)state; }
+static void encoderDumb(int32_t value) { (void)value; }
+static void stepsDumb() { }
 
 RGBEncoder::RGBEncoder(uint8_t i2cAddress) {
     _i2cAddress = i2cAddress;
