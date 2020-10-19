@@ -6,7 +6,7 @@
 // Include library
 #include "RGBEncoder.h"
 
-// Create object of RGBEncoder
+// Create an RGBEncoder object
 RGBEncoder knob;
 
 // Button handler

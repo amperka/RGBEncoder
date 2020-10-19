@@ -8,7 +8,7 @@
 // Include library
 #include "RGBEncoder.h"
 
-// Create object of RGBEncoder
+// Create an RGBEncoder object
 RGBEncoder knob;
 
 // mode is the state of a finite-state machine.
