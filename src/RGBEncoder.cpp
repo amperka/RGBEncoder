@@ -1,7 +1,7 @@
 /*
  * This file is a part of RGBEncoder library.
  *
- * Product page: https://amperka.ru/product/rgbencoder
+ * Product page: https://amperka.ru/product/troyka-rgb-encoder
  * © Amperka LLC (https://amperka.com, dev@amperka.com)
  *
  * Author: Yury Botov <by@amperka.com>
