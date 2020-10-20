@@ -51,7 +51,7 @@ Sets the step of changing the encoder value.
 
 Sets the operation mode of the encoder - with clamp on the range or cyclic.
 
-- `mode`: the set mode of the encoder, can be` RGBENC_CLAMP` or `RGBENC_WRAP`.
+- `mode`: the set mode of the encoder, can be `RGBENC_CLAMP` or `RGBENC_WRAP`.
 
 ### `void update()`
 
