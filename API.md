@@ -55,7 +55,7 @@ Sets the operation mode of the encoder - with clamp on the range or cyclic.
 
 ### `void update()`
 
-Synchronizes the encoder state. Call it in `loop ()`.
+Synchronizes the encoder state. Call it in `loop()`.
 
 ### `void setColor(uint8_t red, uint8_t green, uint8_t blue)`
 
