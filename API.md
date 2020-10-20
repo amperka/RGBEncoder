@@ -2,7 +2,7 @@
 
 ## `class RGBEncoder`
 
-Create an `RGBEncoder` object to work with the multifunctional module [RGBEncoder] (https://my.amperka.com/modules/RGBEncoder).
+Create an `RGBEncoder` object to work with the multifunctional module [RGBEncoder] (https://my.amperka.com/modules/troyka-rgb-encoder).
 This module is a rotation encoder, a button (when you press the encoder shaft), and RGB illumination of the encoder shaft. There are two interfaces for the button and encoder: direct access and pseudo-asynchronous.
 
 ### `RGBEncoder(uint8_t i2cAddress = 42)`
@@ -11,8 +11,8 @@ Creates a new `RGBEncoder` object using hardware i2c.
 
 - `i2cAddress`: i2c bus device address. When called without a parameter, its value is assumed to be 42.
 
-
 ### `void begin()`
+
 ### `void begin(TwoWire* wire)`
 
 Initializes the interface, sets the device to the "default" state. In this case, the operating range of the encoder values ​​is set [0-255], the value of the encoder at start is 0, the step of change is 1, the mode is "within the range".
@@ -32,7 +32,7 @@ Saves the current device i2c address to EEPROM.
 
 Forces the current value of the encoder. If this value is outside the working range, it is converted to the extreme value of the working range.
 
-- `value`: the set value of the encoder [−2147483648; 2147483647] must be within the range set by the` setRange` command.
+- `value`: the set value of the encoder [−2147483648; 2147483647] must be within the range set by the `setRange` command.
 
 ### `void setRange(int32_t min, int32_t max)`
 
