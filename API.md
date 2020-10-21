@@ -3,7 +3,7 @@
 ## `class RGBEncoder`
 
 Create an `RGBEncoder` object to work with the multifunctional module [RGBEncoder] (https://my.amperka.com/modules/troyka-rgb-encoder).
-This module is a rotation encoder, a button (when you press the encoder shaft), and RGB illumination of the encoder shaft. There are two interfaces for the button and encoder: direct access and pseudo-asynchronous.
+This module is a rotation encoder, a button (press the encoder shaft), and RGB illumination of the encoder shaft. There are two interfaces for the button and encoder: direct access and pseudo-asynchronous.
 
 ### `RGBEncoder(uint8_t i2cAddress = 42)`
 
