@@ -22,7 +22,7 @@ Call this method before interacting with RGBEncoder. For example, in the `setup 
 
 ### `void changeAddr(uint8_t newAddress)`
 
-- `newAddress`: new i2c address for device.
+- `newAddress`: new i2c address for the device.
 
 ### `void saveAddr(void)`
 
