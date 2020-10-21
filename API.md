@@ -30,7 +30,7 @@ Saves the current device i2c address to EEPROM.
 
 ### `void setValue(int32_t value)`
 
-Forces the current value of the encoder. If this value is outside the working range, it is converted to the extreme value of the working range.
+Forces the current value of the encoder. If this value is outside of the working range, it is converted to the working range's extreme value.
 
 - `value`: the set value of the encoder [−2147483648; 2147483647] must be within the range set by the `setRange` command.
 
