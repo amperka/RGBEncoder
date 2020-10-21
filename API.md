@@ -45,7 +45,7 @@ Sets the limits of the working range of the encoder values. If the current value
 
 Sets the step of change of the encoder value.
 
-- `step`: step of changing the encoder value.
+- `step`: the step of change of the encoder value.
 
 ### `void setMode(enum EncoderMode mode)`
 
