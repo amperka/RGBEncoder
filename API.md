@@ -36,7 +36,7 @@ Forces the current value of the encoder. If this value is outside of the working
 
 ### `void setRange(int32_t min, int32_t max)`
 
-Sets the limits of the working range of the encoder values. If the current value is outside the operating range, it is converted to the extreme value of the operating range.
+Sets the limits of the working range of the encoder values. If the current value is outside of the operating range, it is converted to the operating range's extreme value.
 
 - `min`: lower limit of the encoder working range [−2147483648; 2147483647].
 - `max`: upper limit of the encoder working range [−2147483648; 2147483647].
