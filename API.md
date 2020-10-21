@@ -75,7 +75,7 @@ Returns the current value of the encoder.
 
 ### `void onButton(void (*buttonHandler)(bool state))`
 
-Registers a function - an event handler from a button.
+Registers a function - a button event handler.
 
 ### `void onEncoder(void (*encoderHandler)(int32_t value))`
 
