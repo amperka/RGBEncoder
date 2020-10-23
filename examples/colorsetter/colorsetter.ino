@@ -23,25 +23,26 @@ byte mode = CHANGE_RED;
 byte red = 0, green = 0, blue = 0;
 
 // Handler of button
-void buttonHandler(bool state) {
-    if (state) { // if button pressed ...
-        switch (mode) {
-        case CHANGE_RED:
-            mode = CHANGE_GREEN; // select next state
-            blue = knob.getEncoderValue(); // save previous color component value
-            knob.setValue(red); // load new color component value
-            break;
-        case CHANGE_GREEN:
-            mode = CHANGE_BLUE;
-            red = knob.getEncoderValue();
-            knob.setValue(green);
-            break;
-        case CHANGE_BLUE:
-            mode = CHANGE_RED;
-            green = knob.getEncoderValue();
-            knob.setValue(blue);
-            break;
-        }
+void buttonHandler(bool pressed) {
+    if (!pressed)
+        return;
+
+    switch (mode) {
+    case CHANGE_RED:
+        mode = CHANGE_GREEN; // select next state
+        blue = knob.getEncoderValue(); // save previous color component value
+        knob.setValue(red); // load new color component value
+        break;
+    case CHANGE_GREEN:
+        mode = CHANGE_BLUE;
+        red = knob.getEncoderValue();
+        knob.setValue(green);
+        break;
+    case CHANGE_BLUE:
+        mode = CHANGE_RED;
+        green = knob.getEncoderValue();
+        knob.setValue(blue);
+        break;
     }
 }
 
