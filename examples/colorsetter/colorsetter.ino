@@ -65,7 +65,7 @@ void setup() {
     // register handlers for button and encoder
     knob.onButton(buttonHandler);
     knob.onEncoder(encoderHandler);
-    // switch-of led
+    // switch-off led
     knob.setColor(0, 0, 0);
 }
 
