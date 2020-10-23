@@ -13,9 +13,10 @@ RGBEncoder knob;
 
 // mode is the state of a finite-state machine.
 // By switching these states, we select the color component that we want to adjust.
-#define CHANGE_RED 0
-#define CHANGE_GREEN 1
-#define CHANGE_BLUE 2
+constexpr byte CHANGE_RED = 0;
+constexpr byte CHANGE_GREEN = 1;
+constexpr byte CHANGE_BLUE = 2;
+
 byte mode = CHANGE_RED;
 
 // Current color components values
