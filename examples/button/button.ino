@@ -10,10 +10,10 @@
 RGBEncoder knob;
 
 // Button handler
-void buttonHandler(bool state) {
-    if (state) { // if pressed
+void buttonHandler(bool pressed) {
+    if (pressed) {
         knob.setColor(255, 255, 255); // switch-on light
-    } else { // if not pressed
+    } else {
         knob.setColor(0, 0, 0); // switch-off light
     }
 }
