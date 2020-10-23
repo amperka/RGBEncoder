@@ -62,7 +62,7 @@ private:
     int32_t _encoderUpperBound;
     int32_t _encoderCurrentValue;
     uint32_t _encoderStep;
-    enum EncoderMode _encoderMode;
+    EncoderMode _encoderMode;
     void (*_buttonHandler)(bool);
     void (*_encoderHandler)(int32_t);
     void (*_stepLeftHandler)();
