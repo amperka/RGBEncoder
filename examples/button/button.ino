@@ -25,5 +25,5 @@ void setup() {
 }
 
 void loop() {
-    knob.update(); // it implements pseudo-asynchronous work
+    knob.update(); // upkeep to trigger the handler when necessary
 }
