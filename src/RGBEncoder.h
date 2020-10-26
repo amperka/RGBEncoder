@@ -33,7 +33,7 @@ public:
     void setValue(int32_t value);
     void setRange(int32_t min, int32_t max);
     void setStep(int32_t step);
-    void setMode(enum EncoderMode mode);
+    void setMode(EncoderMode mode);
 
     void update();
 
