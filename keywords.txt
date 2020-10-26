@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map RGBEncoder
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+RGBEncoder	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin			KEYWORD2
+changeAddr		KEYWORD2
+saveAddr        KEYWORD2
+setValue		KEYWORD2
+setRange		KEYWORD2
+setStep			KEYWORD2
+update			KEYWORD2
+setMode			KEYWORD2
+setColor		KEYWORD2
+isButtonPressed		KEYWORD2
+getEncoderValue		KEYWORD2
+onButton		KEYWORD2
+onEncoder		KEYWORD2
+onStepLeft      KEYWORD2
+onStepRight     KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+RGBENC_WRAP			LITERAL1
+RGBENC_CLAMP		LITERAL1
